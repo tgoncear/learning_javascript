@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comptador Ionic</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <button id="counter"></button>
+    <script>
+
+        let counterBut = document.getElementById('counter');
+        let count = 0;
+        function initComponent(){
+            counterBut.innerText = count;
+        }
+        counterBut.addEventListener('click',function incrementCounter(){
+            count = Number(counterBut.innerText) + 1;
+            counterBut.innerText = count;
+            initComponent();
+        });
+        initComponent();
+    </script>
+</body>
+</html>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        background-color: lightgray;
+
+    }
+    #counter{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: middle;
+    }
+</style>
